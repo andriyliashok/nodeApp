@@ -7,10 +7,10 @@ function Movie(id,name, age) {
 }
 
 const movies = [
-    new Movie(2, 'Commando', 18),
+    new Movie(1, 'Commando', 18),
     new Movie(2, 'Matrix', 18),
-    new Movie(2, 'Lord of the Rings', 12),
-    new Movie(2, 'Agent 007', 20),
+    new Movie(3, 'Lord of the Rings', 12),
+    new Movie(4, 'Agent 007', 20),
 ];
 
 function getMovieById(id) {
@@ -34,7 +34,7 @@ function movieCheckerController(){
         const {movieId, clientAge} = req.params;
 
         const result = checkAge(movieId, clientAge);
-
+        res.send(result)
     }
 }
 
